@@ -2,7 +2,26 @@
   "name": "fullstack-sdet-automation",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test --project=api --project=ui --project=ai",
+    "test:all": "playwright test",
+    "test:api": "playwright test --project=api",
+    "test:ui": "playwright test --project=ui",
+    "test:mobile": "playwright test --project=mobile",
+    "test:ai": "playwright test --project=ai",
+    "test:ai:llm": "playwright test tests/ai/llm",
+    "test:ai:mcp": "playwright test tests/ai/mcp",
+    "test:ai:rag": "playwright test tests/ai/rag",
+    "test:ai:agents": "playwright test tests/ai/agents",
+    "test:data": "playwright test --project=data",
+    "test:performance": "playwright test --project=performance",
+    "test:accessibility": "playwright test --project=accessibility",
+    "test:security": "playwright test --project=security",
+    "test:database": "playwright test --project=database",
+    "test:visual": "playwright test --project=visual",
+    "test:load": "k6 run k6/smoke.js",
+    "report": "playwright show-report"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tjl352/fullstack-sdet-automation.git"
